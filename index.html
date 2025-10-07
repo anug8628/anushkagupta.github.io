@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a.g. - Anushka Gupta</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 20px 40px;
+            background-color: #fff;
+            width: 100%;
+            border-bottom: 1px solid #e0e0e0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #c44536;
+        }
+
+        nav a.active {
+            color: #c44536;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 40px 60px;
+        }
+
+        section {
+            min-height: 60vh;
+            padding: 40px 0;
+        }
+
+        section:not(#about) {
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            margin-top: 10px;
+        }
+
+        .tagline {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .content-section {
+            margin-bottom: 35px;
+        }
+
+        .content-section p {
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            font-weight: 600;
+        }
+
+        .link {
+            color: #c44536;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        ul.content-list {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+
+        ul.content-list li {
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .project-card {
+            border-left: 3px solid #c44536;
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .project-title {
+            font-weight: 600;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+
+        .project-meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            main {
+                padding: 100px 20px 40px;
+            }
+
+            nav {
+                padding: 15px 20px;
+            }
+
+            nav ul {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about" class="nav-link active">about</a></li>
+            <li><a href="#research" class="nav-link">research</a></li>
+            <li><a href="#projects" class="nav-link">projects</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- ABOUT SECTION -->
+        <section id="about" class="active">
+            <h1>a.g.</h1>
+            <h2>Anushka Gupta | अनुष्का गुप्ता</h2>
+            <p class="tagline">building systems that scale & ml that thinks</p>
+
+            <div class="content-section">
+                <p><span class="highlight">software engineer @ StubHub</span> - architecting high-performance systems that don't break under pressure. orchestrated kubernetes infrastructure handling 1.3M daily requests, slashed microservice latency by 98% (1.3s → 20ms), and built ML models that optimize ad spend in real-time. turns out you can make algorithms pay for themselves.</p>
+            </div>
+
+            <div class="content-section">
+                <p>graduated with <span class="highlight">m.s. in machine learning</span> (4.0 gpa) and <span class="highlight">b.s. in computer science</span> (3.95 gpa, summa cum laude) from <em>columbia university</em>. collected some nice scholarships along the way: athena pinnacle ($10K), society of women engineers ($2.5K), and grace hopper scholar 2022 & 2023.</p>
+            </div>
+
+            <p class="section-title">currently:</p>
+            <ul class="content-list">
+                <li>building predictive models that cut ad inefficiencies by 24% across top revenue categories. develops models for goal-based delivery optimization, such as CPC, CPV, and CPCV. productionized predictive models to forecast the effectiveness of advertising campaigns, including metrics like impressions, reach, clicks, conversions, and ROI.</li>
+                <li>architecting event-driven systems with AWS (SQS/SNS), kubernetes, and docker that actually scale.</li>
+            </ul>
+
+            <p class="section-title">past work:</p>
+            <ul class="content-list">
+                <li><span class="highlight">PDT Partners</span> (quant hedge fund) - built end-to-end data validation platform with React/Flask/PostgreSQL. shipped 100K validations in 3 months. orchestrated microservices that made data scientists' lives easier.</li>
+                <li><span class="highlight">Springfield Capital Management</span> - scraped live trade data from Refinitiv Eikon, built OCaml parser for 150+ freight derivative tokens, achieved 95% accuracy with 0.8x recall for HFT trading. tracking metrics on AWS S3/Cloudwatch/Grafana.</li>
+                <li><span class="highlight">Balyasny Asset Management</span> - modified POMO (position monitor) handling 25K+ daily trades for 180+ portfolio managers. ensured accurate trade reconciliation and position tracking across high-value portfolios.</li>
+                <li><span class="highlight">Google Inc.</span> (GPay team) - engineered backend simulator for credit card tokenization using async programming, RPCs, and lambda functions in Java. accelerated vendor API verification for 5+ payment processors. also taught girl scouts javascript because getting more people into tech matters!</li>
+                <li><span class="highlight">Columbia Technology Ventures</span> - analyzed 130+ research inventions, matched them to industry partners across life sciences, clean energy, blockchain, and cybersecurity. helped spark 25 license deals and IP-backed startups. taught workshops on career paths to fellow students.</li>
+            </ul>
+
+            <p class="section-title">teaching:</p>
+            <ul class="content-list">
+                <li>teaching assistant for computational linear algebra - explained matrix decompositions and eigenvalues to 200+ students who were trying to understand why math matters for machine learning.</li>
+                <li>directed columbia's largest student entrepreneurship society (4000+ members, 50+ events) - helped launch 70+ student startups that collectively raised $35M+ from VCs.</li>
+            </ul>
+
+            <p class="section-title">prior fun:</p>
+            <ul class="content-list">
+                <li>dabbling with personal test kitchens in her free time - experimenting with flavors, techniques, and hosting dinners when not debugging production issues. <a href="#" class="link" id="menu-link-1">menu 1</a> <a href="#" class="link" id="menu-link-2">menu 2</a></li>
+            </ul>
+        </section>
+
+        <!-- RESEARCH SECTION -->
+        <section id="research">
+            <h1>research.</h1>
+            <p class="tagline">exploring ml systems, data infrastructure, and making computers do smart things</p>
+
+            <div class="content-section">
+                <p class="section-title">areas of interest:</p>
+                <ul class="content-list">
+                    <li><span class="highlight">machine learning systems</span> - building ML infrastructure that scales from prototype to production. interested in model optimization, deployment pipelines, and making neural networks run fast on real hardware.</li>
+                    <li><span class="highlight">high-performance computing</span> - optimizing distributed systems, reducing latency, and making sure algorithms don't choke when millions of requests hit simultaneously.</li>
+                    <li><span class="highlight">financial ML</span> - applying machine learning to trading systems, real-time predictions, and optimization problems where milliseconds matter and money is the scorecard.</li>
+                    <li><span class="highlight">data engineering</span> - designing robust data pipelines, validation frameworks, and making messy real-world data behave.</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <p class="section-title">academic background:</p>
+                <p>coursework spanning the full stack of modern ML and systems: functional programming (OCaml, Haskell), competitive programming, machine learning, natural language processing, computational linear algebra, financial engineering, simulation modeling, and advanced programming. because sometimes you need to know category theory to build better APIs.</p>
+            </div>
+
+            <div class="content-section">
+                <p class="section-title">select research projects:</p>
+
+                <div class="project-card">
+                    <div class="project-title">3D Food Printing for Personalized Nutrition</div>
+                    <div class="project-meta">Columbia University Creative Machines Lab • Spring 2023</div>
+                    <p>developed custom food-3D printer software from scratch and engineered hardware modifications for multi-ingredient extrusion system. successfully executed 18-ingredient print using modified Slic3r software, custom G-code generation, and rheology-optimized food pastes. integrated CAD modeling, materials testing, and real-time extrusion control to create complex multi-course meals through additive manufacturing. <a href="https://www.nsf.gov/science-matters/3d-food-printing-healthy-eating-delicious-desserts" class="link" target="_blank">featured by NSF</a> | <a href="digital_food_report.pdf" class="link" target="_blank">technical report</a></p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Cuff-Less Blood Pressure Monitoring with 3-Axis Accelerometer</div>
+                    <div class="project-meta">University of California San Diego • Published IEEE EMBC 2019</div>
+                    <p>developed novel cuff-less blood pressure monitoring technique using 3-axis accelerometer achieving correlation coefficients of r=0.97 for diastolic and r=0.96 for systolic pressure. designed signal processing pipeline and feature extraction algorithms incorporating ballistocardiogram analysis and multivariate regression. validated approach met AAMI criteria with errors of −0.02±3.82 mmHg (diastolic) and −0.59±7.46 mmHg (systolic) across LOOCV, demonstrating potential for embedded wearable clinical monitoring. <a href="https://ieeexplore.ieee.org/document/8857864" class="link" target="_blank">IEEE publication</a></p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Deep Learning for Plant Root Segmentation</div>
+                    <div class="project-meta">Salk Institute for Biological Studies</div>
+                    <p>developed deep learning models for automated plant root segmentation from microscopy images. improved ground truth data collection pipeline and annotation quality to enhance model performance. applied computer vision techniques to accelerate biological research on plant root systems and growth patterns. <a href="Gupta.Anushka.FinalPoster.pdf" class="link" target="_blank">research poster</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
+            <h1>projects.</h1>
+            <p class="tagline">things i've built that actually work</p>
+
+            <div class="project-card">
+                <div class="project-title">gene expression mapping</div>
+                <div class="project-meta">Haskell • Parallel Computing</div>
+                <p>parallel implementation of inferring gene regulatory networks using an information theoretic approach with boolean networks. algorithm adopted from Barman & Kwon using mutual information-based feature selection (MIFS). built in Haskell with stack, featuring both sequential and parallel modes. generates boolean expressions for gene regulation and visualizes networks with graphviz. successfully tested on E. coli dataset with configurable k-input nodes per target. <a href="https://github.com/anug8628/Gene-Expression-Mapping" class="link" target="_blank">github</a></p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">ryzz programming language</div>
+                <div class="project-meta">OCaml • Compiler Design</div>
+                <p>final project for programming languages & translators. developed custom imperative, strongly typed, strictly typed, statically scoped, and explicitly typed language from scratch. built complete compiler toolchain including lexer, parser, semantic analyzer, and code generator. implemented type checking, memory management, and runtime system. <a href="https://github.com/anug8628/ryzz" class="link" target="_blank">github</a></p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">8th army - emergency operations system</div>
+                <div class="project-meta">Python • Geospatial Optimization</div>
+                <p>built in conjunction with US military to develop optimal system for designing emergency operations in unknown locations given geometric mapping data. case study on Japan extending to other regions. implements geometric discretization of regions, population density functions, vehicle routing algorithms, and assembly point optimization. uses PyVRP for routing, geopy for geocoding, and geopandas for spatial analysis. tackles real-world logistics for non-combatant evacuation operations. <a href="https://github.com/anug8628/8tharmy" class="link" target="_blank">github</a></p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navigation functionality
+            function showSection(targetId) {
+                const navLinks = document.querySelectorAll('.nav-link');
+                const sections = document.querySelectorAll('section');
+
+                console.log('Showing section:', targetId);
+
+                // Update active nav link
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === '#' + targetId) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+
+                // Show target section
+                sections.forEach(section => {
+                    if (section.id === targetId) {
+                        section.classList.add('active');
+                        section.style.display = 'block';
+                    } else {
+                        section.classList.remove('active');
+                        section.style.display = 'none';
+                    }
+                });
+
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            // Add click handlers to nav links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    console.log('Nav link clicked:', targetId);
+                    showSection(targetId);
+                });
+            });
+
+            // Menu links - open PDFs in new tab
+            document.getElementById('menu-link-1').addEventListener('click', (e) => {
+                e.preventDefault();
+                window.open('nush_test_kitchen_1_menu.pdf', '_blank');
+            });
+
+            document.getElementById('menu-link-2').addEventListener('click', (e) => {
+                e.preventDefault();
+                window.open('nush_test_kitchen_2_menu.pdf', '_blank');
+            });
+
+            // Check URL hash on page load
+            const hash = window.location.hash.substring(1);
+            if (hash && ['about', 'research', 'projects'].includes(hash)) {
+                showSection(hash);
+            }
+        });
+    </script>
+</body>
+</html>
