@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a.g. - Anushka Gupta</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 20px 40px;
+            background-color: #fff;
+            width: 100%;
+            border-bottom: 1px solid #e0e0e0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #c44536;
+        }
+
+        nav a.active {
+            color: #c44536;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 40px 60px;
+        }
+
+        section {
+            min-height: 60vh;
+            padding: 40px 0;
+        }
+
+        section:not(#about) {
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            margin-top: 10px;
+        }
+
+        .tagline {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .content-section {
+            margin-bottom: 35px;
+        }
+
+        .content-section p {
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            font-weight: 600;
+        }
+
+        .link {
+            color: #c44536;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        ul.content-list {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+
+        ul.content-list li {
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .project-card {
+            border-left: 3px solid #c44536;
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .project-title {
+            font-weight: 600;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+
+        .project-meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            main {
+                padding: 100px 20px 40px;
+            }
+
+            nav {
+                padding: 15px 20px;
+            }
+
+            nav ul {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#about" class="nav-link active">about</a></li>
+            <li><a href="#research" class="nav-link">research</a></li>
+            <li><a href="#projects" class="nav-link">projects</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- ABOUT SECTION -->
+        <section id="about" class="active">
+            <h1>a.g.</h1>
+            <h2>अनुष्का गुप्ता</h2>
+            <p class="tagline">building systems that scale & ml that thinks</p>
+
+            <div class="content-section">
+                <p><span class="highlight">software engineer @ StubHub</span> - architecting high-performance systems that don't break under pressure. orchestrated kubernetes infrastructure handling 1.3M daily requests, slashed microservice latency by 98% (1.3s → 20ms), and built ML models that optimize ad spend in real-time. turns out you can make algorithms pay for themselves.</p>
+            </div>
+
+            <div class="content-section">
+                <p>graduated with <span class="highlight">m.s. in machine learning</span> (4.0 gpa) and <span class="highlight">b.s. in computer science</span> (3.95 gpa, summa cum laude) from <em>columbia university</em>. collected some nice scholarships along the way: athena pinnacle ($10K), society of women engineers ($2.5K), and grace hopper scholar 2022 & 2023.</p>
+            </div>
+
+            <p class="section-title">currently:</p>
+            <ul class="content-list">
+                <li>leading acquisition engineering at StubHub - building predictive models that cut ad inefficiencies by 24% across top revenue categories.</li>
+                <li>architecting event-driven systems with AWS (SQS/SNS), kubernetes, and docker that actually scale.</li>
+            </ul>
+
+            <p class="section-title">past work:</p>
+            <ul class="content-list">
+                <li><span class="highlight">PDT Partners</span> (quant hedge fund) - built end-to-end data validation platform with React/Flask/PostgreSQL. shipped 100K validations in 3 months. orchestrated microservices that made data scientists' lives easier.</li>
+                <li><span class="highlight">Springfield Capital Management</span> - scraped live trade data from Refinitiv Eikon, built OCaml parser for 150+ freight derivative tokens, achieved 95% accuracy with 0.8x recall for HFT trading. tracking metrics on AWS S3/Cloudwatch/Grafana because if you're not measuring it, you're guessing.</li>
+                <li><span class="highlight">Balyasny Asset Management</span> - modified POMO (position monitor) handling 25K+ daily trades for 180+ portfolio managers. made sure money moves correctly when billions are on the line.</li>
+                <li><span class="highlight">Google Inc.</span> (GPay team) - engineered backend simulator for credit card tokenization using async programming, RPCs, and lambda functions in Java. accelerated vendor API verification for 5+ payment processors. also taught 40 girl scouts javascript because getting more people into tech matters.</li>
+                <li><span class="highlight">Columbia Technology Ventures</span> - analyzed 130+ research inventions, matched them to industry partners across life sciences, clean energy, blockchain, and cybersecurity. helped spark 25 license deals and IP-backed startups. taught workshops on career paths to fellow students.</li>
+            </ul>
+
+            <p class="section-title">teaching:</p>
+            <ul class="content-list">
+                <li>teaching assistant for computational linear algebra - explained matrix decompositions and eigenvalues to 200+ students who were trying to understand why math matters for machine learning.</li>
+                <li>directed columbia's largest student society (4000+ members, 50+ events) - helped launch 70+ student startups that collectively raised $35M+ from VCs.</li>
+            </ul>
+
+            <p class="section-title">prior fun:</p>
+            <ul class="content-list">
+                <li>dabbling with personal test kitchens in her free time - experimenting with flavors, techniques, and <a href="#" class="link" id="menu-link">occasional menu designs</a> when not debugging production issues.</li>
+            </ul>
+        </section>
+
+        <!-- RESEARCH SECTION -->
+        <section id="research">
+            <h1>research.</h1>
+            <p class="tagline">exploring ml systems, data infrastructure, and making computers do smart things</p>
+
+            <div class="content-section">
+                <p class="section-title">areas of interest:</p>
+                <ul class="content-list">
+                    <li><span class="highlight">machine learning systems</span> - building ML infrastructure that scales from prototype to production. interested in model optimization, deployment pipelines, and making neural networks run fast on real hardware.</li>
+                    <li><span class="highlight">high-performance computing</span> - optimizing distributed systems, reducing latency, and making sure algorithms don't choke when millions of requests hit simultaneously.</li>
+                    <li><span class="highlight">financial ML</span> - applying machine learning to trading systems, real-time predictions, and optimization problems where milliseconds matter and money is the scorecard.</li>
+                    <li><span class="highlight">data engineering</span> - designing robust data pipelines, validation frameworks, and making messy real-world data behave.</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <p class="section-title">academic background:</p>
+                <p>coursework spanning the full stack of modern ML and systems: functional programming (OCaml, Haskell), competitive programming, machine learning, natural language processing, computational linear algebra, financial engineering, simulation modeling, and advanced programming. because sometimes you need to know category theory to build better APIs.</p>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects">
+            <h1>projects.</h1>
+            <p class="tagline">things i've built that actually work</p>
+
+            <div class="project-card">
+                <div class="project-title">kubernetes orchestration for high-throughput systems</div>
+                <div class="project-meta">StubHub • 2024-2025</div>
+                <p>architected k8s-based infrastructure handling 1.3M daily requests. migrated messaging to AWS SQS/SNS, reduced event-driven microservice latency from 1.3s to 20ms per message (30x memory reduction). built the foundation for systems that don't fall over during ticket sale rushes.</p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">predictive ML models for ad optimization</div>
+                <div class="project-meta">StubHub • 2024-2025</div>
+                <p>deployed real-time ML models calculating optimal bid multipliers for advertising. created performance-focused "desks" to maximize return on ad spend. cut ad inefficiencies by 24% across top 5 GMS-ranked categories. made algorithms that pay for themselves.</p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">end-to-end data validation platform</div>
+                <div class="project-meta">PDT Partners • Summer 2024</div>
+                <p>built full-stack platform with React, TypeScript, Flask, and Python. designed database schemas using optimal ORM techniques. containerized with Docker, orchestrated microservices with Kubernetes. processed 100K validations in 3 months with AWS SQS/SNS and server-sent events.</p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">HFT trading data pipeline</div>
+                <div class="project-meta">Springfield Capital Management • Summer 2023</div>
+                <p>implemented Python scraper for Refinitiv Eikon extracting live trade data. built OCaml parser handling 150+ tokens for freight derivatives with rule-based parsing and AST generation. achieved 95% accuracy with 0.8x recall on backtested data. deployed tracking system on AWS S3/Cloudwatch/Grafana.</p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">GPay tokenization simulator</div>
+                <div class="project-meta">Google Inc. • Summer 2021</div>
+                <p>engineered backend simulator mimicking credit card tokenization in GPay's infrastructure. leveraged async programming (Promises), RPCs, and lambda functions in Java. accelerated verification for 5+ vendor APIs. documented tokenization pipeline across 15 risk checks into 5 clear endpoints for future developers.</p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">position monitor (POMO) for trading systems</div>
+                <div class="project-meta">Balyasny Asset Management • 2022</div>
+                <p>developed modifications to centralized trading platform managing 25K+ daily trades for 180+ portfolio managers. conducted parallel testing between production and release control systems. built systems where precision matters because billions move through these pipelines.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Navigation functionality
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                
+                // Update active nav link
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                
+                // Show target section
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === targetId) {
+                        section.classList.add('active');
+                    }
+                });
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+
+        // Menu link - opens PDF in new tab
+        document.getElementById('menu-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open('nush_test_kitchen_1_menu.pdf', '_blank');
+        });
+    </script>
+</body>
+</html>
