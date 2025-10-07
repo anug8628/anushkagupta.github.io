@@ -181,7 +181,7 @@
         <!-- ABOUT SECTION -->
         <section id="about" class="active">
             <h1>a.g.</h1>
-            <h2>अनुष्का गुप्ता</h2>
+            <h2>Anushka Gupta | अनुष्का गुप्ता</h2>
             <p class="tagline">building systems that scale & ml that thinks</p>
 
             <div class="content-section">
@@ -203,19 +203,19 @@
                 <li><span class="highlight">PDT Partners</span> (quant hedge fund) - built end-to-end data validation platform with React/Flask/PostgreSQL. shipped 100K validations in 3 months. orchestrated microservices that made data scientists' lives easier.</li>
                 <li><span class="highlight">Springfield Capital Management</span> - scraped live trade data from Refinitiv Eikon, built OCaml parser for 150+ freight derivative tokens, achieved 95% accuracy with 0.8x recall for HFT trading. tracking metrics on AWS S3/Cloudwatch/Grafana because if you're not measuring it, you're guessing.</li>
                 <li><span class="highlight">Balyasny Asset Management</span> - modified POMO (position monitor) handling 25K+ daily trades for 180+ portfolio managers. made sure money moves correctly when billions are on the line.</li>
-                <li><span class="highlight">Google Inc.</span> (GPay team) - engineered backend simulator for credit card tokenization using async programming, RPCs, and lambda functions in Java. accelerated vendor API verification for 5+ payment processors. also taught 40 girl scouts javascript because getting more people into tech matters.</li>
+                <li><span class="highlight">Google Inc.</span> (GPay team) - engineered backend simulator for credit card tokenization using async programming, RPCs, and lambda functions in Java. accelerated vendor API verification for 5+ payment processors. also taught girl scouts javascript because getting more people into tech matters!</li>
                 <li><span class="highlight">Columbia Technology Ventures</span> - analyzed 130+ research inventions, matched them to industry partners across life sciences, clean energy, blockchain, and cybersecurity. helped spark 25 license deals and IP-backed startups. taught workshops on career paths to fellow students.</li>
             </ul>
 
             <p class="section-title">teaching:</p>
             <ul class="content-list">
                 <li>teaching assistant for computational linear algebra - explained matrix decompositions and eigenvalues to 200+ students who were trying to understand why math matters for machine learning.</li>
-                <li>directed columbia's largest student society (4000+ members, 50+ events) - helped launch 70+ student startups that collectively raised $35M+ from VCs.</li>
+                <li>directed columbia's largest student entrepreneurship society (4000+ members, 50+ events) - helped launch 70+ student startups that collectively raised $35M+ from VCs.</li>
             </ul>
 
             <p class="section-title">prior fun:</p>
             <ul class="content-list">
-                <li>dabbling with personal test kitchens in her free time - experimenting with flavors, techniques, and <a href="#" class="link" id="menu-link">occasional menu designs</a> when not debugging production issues.</li>
+                <li>dabbling with personal test kitchens in her free time - experimenting with flavors, techniques, and hosting dinners when not debugging production issues. <a href="#" class="link" id="menu-link-1">menu 1</a> <a href="#" class="link" id="menu-link-2">menu 2</a></li>
             </ul>
         </section>
 
@@ -285,35 +285,50 @@
 
     <script>
         // Navigation functionality
-        const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('section');
+        function showSection(targetId) {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+            
+            // Update active nav link
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === '#' + targetId) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+            
+            // Show target section
+            sections.forEach(section => {
+                if (section.id === targetId) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
-        navLinks.forEach(link => {
+        // Add click handlers to nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const targetId = link.getAttribute('href').substring(1);
-                
-                // Update active nav link
-                navLinks.forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
-                
-                // Show target section
-                sections.forEach(section => {
-                    section.classList.remove('active');
-                    if (section.id === targetId) {
-                        section.classList.add('active');
-                    }
-                });
-                
-                // Scroll to top
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                showSection(targetId);
             });
         });
 
-        // Menu link - opens PDF in new tab
-        document.getElementById('menu-link').addEventListener('click', (e) => {
+        // Menu links - open PDFs in new tab
+        document.getElementById('menu-link-1').addEventListener('click', (e) => {
             e.preventDefault();
             window.open('nush_test_kitchen_1_menu.pdf', '_blank');
+        });
+
+        document.getElementById('menu-link-2').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open('nush_test_kitchen_2_menu.pdf', '_blank');
         });
     </script>
 </body>
